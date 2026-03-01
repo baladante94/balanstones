@@ -1,0 +1,244 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "format:SE-{YYYY}-{#####}",
+ "creation": "2026-03-01 00:00:00.000000",
+ "custom": 0,
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_details_section",
+  "customer_name",
+  "email",
+  "col_break_1",
+  "phone",
+  "enquiry_date",
+  "requirement_section",
+  "material",
+  "dimensions",
+  "col_break_2",
+  "estimated_budget",
+  "preferred_timeline",
+  "description_section",
+  "description",
+  "status_section",
+  "status",
+  "assigned_to",
+  "col_break_3",
+  "source",
+  "conversion_section",
+  "customer",
+  "col_break_4",
+  "quotation",
+  "sales_order",
+  "notes_section",
+  "internal_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone / WhatsApp",
+   "options": "Phone"
+  },
+  {
+   "default": "Today",
+   "fieldname": "enquiry_date",
+   "fieldtype": "Date",
+   "label": "Enquiry Date"
+  },
+  {
+   "fieldname": "requirement_section",
+   "fieldtype": "Section Break",
+   "label": "Sculpture Requirement"
+  },
+  {
+   "fieldname": "material",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Material",
+   "options": "\nLimestone\nGranite\nBoth\nOther"
+  },
+  {
+   "description": "e.g. 4ft x 2ft, or describe verbally",
+   "fieldname": "dimensions",
+   "fieldtype": "Data",
+   "label": "Dimensions / Size"
+  },
+  {
+   "fieldname": "col_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Customer's rough budget indication",
+   "fieldname": "estimated_budget",
+   "fieldtype": "Currency",
+   "label": "Estimated Budget (\u20b9)"
+  },
+  {
+   "fieldname": "preferred_timeline",
+   "fieldtype": "Select",
+   "label": "Preferred Timeline",
+   "options": "\nWithin 1 month\n1\u20133 months\n3\u20136 months\n6+ months\nFlexible"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": ""
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Requirement Description"
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "label": "Status & Assignment"
+  },
+  {
+   "bold": 1,
+   "default": "New",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "New\nReviewing\nQuoted\nWon\nLost\nOn Hold"
+  },
+  {
+   "description": "Artisan or staff handling this enquiry",
+   "fieldname": "assigned_to",
+   "fieldtype": "Link",
+   "label": "Assigned To",
+   "options": "User"
+  },
+  {
+   "fieldname": "col_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Website",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "Website\nWalk-in\nPhone\nReferral\nInstagram\nWhatsApp\nOther"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "conversion_section",
+   "fieldtype": "Section Break",
+   "label": "Conversion (filled when Won)"
+  },
+  {
+   "description": "Auto-filled when Convert to Customer is clicked",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Linked after quotation is raised",
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "label": "Quotation",
+   "options": "Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "label": "Internal Notes"
+  },
+  {
+   "description": "Internal only \u2014 not visible to customer",
+   "fieldname": "internal_notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "icon": "fa fa-gem",
+ "links": [],
+ "modified": "2026-03-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Balan Stones",
+ "name": "Stone Enquiry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {"color": "Blue",   "title": "New"},
+  {"color": "Orange", "title": "Reviewing"},
+  {"color": "Yellow", "title": "Quoted"},
+  {"color": "Green",  "title": "Won"},
+  {"color": "Red",    "title": "Lost"},
+  {"color": "Gray",   "title": "On Hold"}
+ ],
+ "title_field": "customer_name",
+ "track_changes": 1,
+ "track_seen": 1
+}

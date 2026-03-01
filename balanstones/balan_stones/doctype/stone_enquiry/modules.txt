@@ -1,0 +1,9 @@
+{
+ "app_name": "balanstones",
+ "color": "#8B6432",
+ "icon": "octicon octicon-gem",
+ "module_name": "Balan Stones",
+ "name": "Balan Stones",
+ "restricted": 0,
+ "type": "module"
+}
